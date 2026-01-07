@@ -48,4 +48,10 @@ fun EditSiswaScreen(
                 .fillMaxWidth()
                 .padding(dimensionResource(id = R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_large))
-        )
+        ) {
+            FormTambahSiswa(
+                detailSiswa = viewModel.uiStateSiswa.detailSiswa,
+                onValueChange = viewModel::updateUiState,
+                modifier = Modifier.fillMaxWidth()
+            )
+
