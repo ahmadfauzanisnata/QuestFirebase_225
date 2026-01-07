@@ -40,4 +40,12 @@ fun EditSiswaScreen(
                 scrollBehavior = scrollBehavior
             )
         }
-    )
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
+                .fillMaxWidth()
+                .padding(dimensionResource(id = R.dimen.padding_medium)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_large))
+        )
