@@ -12,18 +12,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myfirebase.ui.theme.MyfirebaseTheme
+import com.example.myfirebase.view.controllNavigasi.DataSiswaApp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyfirebaseTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            MyfirebaseTheme {Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                DataSiswaApp(
+                    modifier = Modifier.padding(innerPadding)
+                )
                 }
             }
         }
