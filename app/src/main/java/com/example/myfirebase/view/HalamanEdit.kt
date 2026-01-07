@@ -1,0 +1,25 @@
+package com.example.myfirebase.view
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.myfirebase.R
+import com.example.myfirebase.view.route.DestinasiEdit
+import com.example.myfirebase.viewmodel.EditViewModel
+import com.example.myfirebase.viewmodel.PenyediaViewModel
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun EditSiswaScreen(
+    idSiswa: Long,
+    navigateBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    viewModel: EditViewModel = viewModel(factory = PenyediaViewModel.Factory)
+) 
