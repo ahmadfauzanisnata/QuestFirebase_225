@@ -30,4 +30,14 @@ fun EditSiswaScreen(
         viewModel.loadSiswaById(idSiswa)
     }
 
-   }
+    Scaffold(
+        modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            SiswaTopAppBar(
+                title = stringResource(DestinasiEdit.titleRes),
+                canNavigateBack = true,
+                navigateUp = navigateBack,
+                scrollBehavior = scrollBehavior
+            )
+        }
+    )
