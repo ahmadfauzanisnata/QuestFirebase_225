@@ -26,3 +26,14 @@ fun DetailSiswaScreen(
         viewModel.loadDetail(idSiswa)
     }
 
+    Scaffold(
+        modifier = modifier,
+        topBar = {
+            SiswaTopAppBar(
+                title = stringResource(DestinasiDetail.titleRes),
+                canNavigateBack = true,
+                navigateUp = navigateBack,
+                scrollBehavior = scrollBehavior
+            )
+        }
+    )
