@@ -43,4 +43,10 @@ fun DetailSiswaScreen(
                 .fillMaxWidth()
                 .padding(dimensionResource(id = R.dimen.padding_medium)),
             verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_large))
-        ) 
+        ) {
+            Text(text = viewModel.detail.nama, style = MaterialTheme.typography.titleLarge)
+            Text(text = viewModel.detail.telpon, style = MaterialTheme.typography.bodyLarge)
+            Text(text = viewModel.detail.alamat, style = MaterialTheme.typography.bodyLarge)
+        }
+    }
+}
