@@ -36,4 +36,11 @@ fun DetailSiswaScreen(
                 scrollBehavior = scrollBehavior
             )
         }
-    )
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxWidth()
+                .padding(dimensionResource(id = R.dimen.padding_medium)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_large))
+        ) 
