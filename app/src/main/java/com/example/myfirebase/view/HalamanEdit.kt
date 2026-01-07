@@ -22,4 +22,12 @@ fun EditSiswaScreen(
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: EditViewModel = viewModel(factory = PenyediaViewModel.Factory)
-) 
+) {
+    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+
+    // ketika layar tampil, load data
+    LaunchedEffect(key1 = idSiswa) {
+        viewModel.loadSiswaById(idSiswa)
+    }
+
+   }
