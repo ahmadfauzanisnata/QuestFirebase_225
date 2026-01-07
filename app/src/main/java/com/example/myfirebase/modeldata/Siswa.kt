@@ -14,3 +14,5 @@ data class DetailSiswa(
     val telpon: String = ""
 )
 
+// Fungsi ekstensi untuk mengubah DetailSiswa menjadi model data Siswa
+fun DetailSiswa.toDataSiswa(): Siswa = Siswa(id, nama, alamat, telpon)
