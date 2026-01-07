@@ -55,3 +55,16 @@ fun EditSiswaScreen(
                 modifier = Modifier.fillMaxWidth()
             )
 
+            Button(
+                onClick = {
+                    viewModel.saveSiswa { navigateBack() }
+                },
+                enabled = viewModel.uiStateSiswa.isEntryValid,
+                shape = MaterialTheme.shapes.small,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(stringResource(R.string.btn_submit))
+            }
+        }
+    }
+}
